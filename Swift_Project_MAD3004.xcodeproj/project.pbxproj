@@ -57,9 +57,25 @@
 		9BC7B3FE221CC30A006610B6 /* Swift_Project_MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
+				9BC7B408221CC354006610B6 /* Extensions */,
+				9BC7B406221CC32C006610B6 /* Classes */,
 				9BC7B3FF221CC30A006610B6 /* main.swift */,
 			);
 			path = Swift_Project_MAD3004;
+			sourceTree = "<group>";
+		};
+		9BC7B406221CC32C006610B6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9BC7B408221CC354006610B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
