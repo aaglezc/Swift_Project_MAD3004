@@ -14,3 +14,9 @@ var u1 = User(userId: "Priya", password: "Priya123" , loginStatus: "Active")
 
 
 print("User Id: ",u1.userId)
+
+
+var a1 = Administrator(adminName: "Priya Aggarwal", email: "priya123@gmail.com", userId: "Priya", password: "Priya123" , loginStatus: "Active")
+
+
+print("Admin Name: ", a1.adminName!)
