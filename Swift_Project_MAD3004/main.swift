@@ -10,3 +10,7 @@ import Foundation
 
 print("-----------------Swift Project_MAD 3004-------------")
 
+var u1 = User(userId: "Priya", password: "Priya123" , loginStatus: "Active")
+
+
+print("User Id: ",u1.userId)
