@@ -35,6 +35,7 @@ var product5 = Product(productId: 05, productName: "Iphone 7 plus", Price: 9889 
 
 product1.display()
 print(product1.ProductName)
+print("**************************")
 product2.display()
 product3.display()
 product4.display()
