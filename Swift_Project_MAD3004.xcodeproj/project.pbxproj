@@ -13,7 +13,9 @@
 		9B4153712220CF6B0037DC78 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4153702220CF6B0037DC78 /* DateFormatting.swift */; };
 		9B5B21AC221F86B80072670D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AB221F86B80072670D /* User.swift */; };
 		9B5B21AE221F89840072670D /* Administrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AD221F89840072670D /* Administrator.swift */; };
+		9B5B21B0221F8DBB0072670D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AF221F8DBB0072670D /* Protocols.swift */; };
 		9BC7B400221CC30A006610B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC7B3FF221CC30A006610B6 /* main.swift */; };
+		9BEBC4ED2220CE930045A9EB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBC4EC2220CE930045A9EB /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +37,10 @@
 		9B4153702220CF6B0037DC78 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatting.swift; path = Swift_Project_MAD3004/DateFormatting.swift; sourceTree = SOURCE_ROOT; };
 		9B5B21AB221F86B80072670D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Swift_Project_MAD3004/User.swift; sourceTree = SOURCE_ROOT; };
 		9B5B21AD221F89840072670D /* Administrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Administrator.swift; path = Swift_Project_MAD3004/Administrator.swift; sourceTree = SOURCE_ROOT; };
+		9B5B21AF221F8DBB0072670D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Swift_Project_MAD3004/Protocols.swift; sourceTree = SOURCE_ROOT; };
 		9BC7B3FC221CC30A006610B6 /* Swift_Project_MAD3004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift_Project_MAD3004; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC7B3FF221CC30A006610B6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9BEBC4EC2220CE930045A9EB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Swift_Project_MAD3004/Product.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +85,13 @@
 			children = (
 				9B5B21AB221F86B80072670D /* User.swift */,
 				9B5B21AD221F89840072670D /* Administrator.swift */,
+
 				9B41536A2220BB630037DC78 /* Customer.swift */,
 				9B41536C2220C07E0037DC78 /* ShoppingCart.swift */,
 				9B41536E2220C63C0037DC78 /* Orders.swift */,
+=======
+				9BEBC4EC2220CE930045A9EB /* Product.swift */,
+
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -92,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				9B4153702220CF6B0037DC78 /* DateFormatting.swift */,
+=======
+				9B5B21AF221F8DBB0072670D /* Protocols.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,8 +168,13 @@
 				9B4153712220CF6B0037DC78 /* DateFormatting.swift in Sources */,
 				9B5B21AE221F89840072670D /* Administrator.swift in Sources */,
 				9B5B21AC221F86B80072670D /* User.swift in Sources */,
+				9BEBC4ED2220CE930045A9EB /* Product.swift in Sources */,
 				9BC7B400221CC30A006610B6 /* main.swift in Sources */,
+
 				9B41536B2220BB630037DC78 /* Customer.swift in Sources */,
+=======
+				9B5B21B0221F8DBB0072670D /* Protocols.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
