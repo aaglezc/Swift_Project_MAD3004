@@ -89,7 +89,6 @@
 				9B41536A2220BB630037DC78 /* Customer.swift */,
 				9B41536C2220C07E0037DC78 /* ShoppingCart.swift */,
 				9B41536E2220C63C0037DC78 /* Orders.swift */,
-=======
 				9BEBC4EC2220CE930045A9EB /* Product.swift */,
 
 			);
@@ -100,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				9B4153702220CF6B0037DC78 /* DateFormatting.swift */,
-=======
 				9B5B21AF221F8DBB0072670D /* Protocols.swift */,
 			);
 			path = Extensions;
@@ -170,9 +168,7 @@
 				9B5B21AC221F86B80072670D /* User.swift in Sources */,
 				9BEBC4ED2220CE930045A9EB /* Product.swift in Sources */,
 				9BC7B400221CC30A006610B6 /* main.swift in Sources */,
-
 				9B41536B2220BB630037DC78 /* Customer.swift in Sources */,
-=======
 				9B5B21B0221F8DBB0072670D /* Protocols.swift in Sources */,
 
 			);
