@@ -16,7 +16,7 @@ class Customer: User
     private var _email: String?
     private var _creditCardInfo: String?
     private var _shippingInfo: String?
-    private var _shopinCart: [ShoppingCart]?
+    private var _shoppinCart: [ShoppingCart]?
     
     
     var custName: String{
@@ -75,7 +75,7 @@ class Customer: User
     self._email = String()
     self._creditCardInfo = String()
     self._shippingInfo = String()
-    self._shopinCart = [ShoppingCart] ()
+    self._shoppinCart = [ShoppingCart] ()
     super.init()
     }
     
@@ -127,6 +127,13 @@ class Customer: User
         }
         return false
     }
+    
+    func addCartItem(cartItem: ShoppingCart)
+    {
+      self._shoppinCart?.append(cartItem)
+    }
+    
+    
     
     func display()
     {

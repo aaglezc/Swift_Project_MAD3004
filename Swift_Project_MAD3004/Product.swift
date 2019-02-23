@@ -15,7 +15,7 @@ class Product
     private var _productName:String
     private var _price: Double
     
-    /*var ProductId: Int
+    var ProductId: Int
     {
         get {
             return _productId
@@ -24,7 +24,7 @@ class Product
             _productId = newValue
         }
     }
-    */
+    
     var ProductName: String
     {
         get

@@ -11,7 +11,7 @@ import Foundation
 class ShoppingCart
 {
     private var _cartId: Int?
-    private var _productId: Int?
+    private var _productId: Product?
     private var _quantity: Int?
     private var _dateAdded: String
     
@@ -24,7 +24,7 @@ class ShoppingCart
             _cartId = newValue
         }
     }
-    var productId: Int
+    var productId: Product
     {
         get {
             return _productId!
@@ -54,13 +54,13 @@ class ShoppingCart
     init()
     {
         self._cartId = Int()
-        self._productId = Int()
+        self._productId = Product()
         self._quantity = Int()
         self._dateAdded = String()
     }
     
     
-    init(cartId: Int, productId: Int, quantity: Int, dateAdded: String)
+    init(cartId: Int, productId: Product, quantity: Int, dateAdded: String)
     {
         self._cartId = cartId
         self._productId = productId

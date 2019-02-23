@@ -124,7 +124,6 @@ if user1.verifyLogin(customers: customers,user: user1)
 else
 {
     print(user1.loginStatus)
-    
 }
 
 //4.-Update customer info
@@ -135,6 +134,9 @@ if !user1.updateProfile(customers: customers)
 {
     print("Update Record Failed")
 }
+
+//5.- customer add 4 products to
+var carItem1 = ShoppingCart(
 
 
 
