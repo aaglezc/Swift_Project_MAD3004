@@ -63,3 +63,23 @@ print(s1.cartId)
 var o1 = Order(orId: 2001, dtCreate: "2019/01/01" , dtShip: "2019/01/03", cxName: "Mandeep Kaur", cxId: "C0747798", Status: "Ready to Ship", ShippinId: "S0747798")
 o1.display()
 print(o1.CustomerID)
+
+//------------------------------------------- Main Script
+var p1 = Product(productId: 1, productName: "33", Price: 30.0)
+p1.Price = 45
+print(p1.Price)
+
+//1. Creating product catalog
+var pr1 = Product(productId: 01, productName: "Hard Drive",Price: 100)
+var pr2 = Product(productId: 02, productName: "Zip Drive", Price: 150)
+var pr3 = Product(productId: 03, productName: "Compact Disk", Price: 2)
+var pr4 = Product(productId: 04, productName: "Monitor", Price: 120)
+var pr5 = Product(productId: 05, productName: "Iphone 7 plus", Price: 800)
+var products = [Product]()
+products.append(pr1)
+products.append(pr2)
+products.append(pr3)
+products.append(pr4)
+products.append(pr5)
+
+ 

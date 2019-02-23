@@ -15,7 +15,7 @@ class Product
     private var _productName:String
     private var _price: Double
     
-    var ProductId: Int
+    /*var ProductId: Int
     {
         get {
             return _productId
@@ -24,20 +24,26 @@ class Product
             _productId = newValue
         }
     }
-    var ProductName: String{
-        get {
+    */
+    var ProductName: String
+    {
+        get
+        {
             return _productName
         }
-        set{
+        set
+        {
             _productName = newValue
         }
     }
     var Price: Double
     {
-        get {
+        get
+        {
             return _price
         }
-        set{
+        set
+        {
             _price = newValue
         }
     }
@@ -46,7 +52,7 @@ class Product
     init()
     {
         self._productId = 0
-        self._productName = "nil"
+        self._productName = String()
         self._price = Double()
     }
     
