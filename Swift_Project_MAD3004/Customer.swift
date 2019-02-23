@@ -118,7 +118,6 @@ class Customer: User
         print("eMail Address: \(self._email!)")
         print("Credit Card Information: \(self._creditCardInfo!)")
         print("Shipping Information: \(self._shippingInfo!)")
-        print("Shoping Cart Information: \(self._shopinCart)")
     }
 }
 
