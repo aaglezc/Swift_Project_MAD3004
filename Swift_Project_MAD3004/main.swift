@@ -70,7 +70,7 @@ p1.Price = 45
 print(p1.Price)
 
 //1.- Creating Administrator user
-var adm1 = Administrator(adminName: "Arthur", email: "aaglezc@gmail.com", userId: "aaglezc", password: "abc", loginStatus: "Active")
+var adm1 = Administrator(adminName: "Arthur", email: "aaglezc@gmail.com", userId: "aaglezc", password: "abc")
 
 //1.5. Creating product catalog
 var pr1 = Product(productId: 01, productName: "Hard Drive",Price: 100)
@@ -92,17 +92,51 @@ if adm1.updateCatalog(products: products, updProduct: prUdpdated)
 print("Product Updated Succesfully")
 }
 
-
-var customers : [Customer]
+//2.- Creating customer users
+var customers = [Customer]()
 
 var cust1 = Customer()
-let success = cust1.register(CustomerName: "Priyra", Address: "123 Jane St.", eMail: "abc@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+var cust2 = Customer()
+var success = cust1.register(CustomerName: "Priyra M.", Address: "123 Jane St.", eMail: "priyra@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+if success
+{
+    customers.append(cust1)
+}
+success = cust2.register(CustomerName: "Mandeep K.", Address: "56 Dixie Rd.", eMail: "mdeepabc@mail.com", CreditCardInfo: "1644 4747 3354 5541", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+if success
+{
+    customers.append(cust2)
+}
+
+for i in customers
+{
+    i.display()
+}
+
+//3.- Accesing with user info
+var user1 = Customer(userId:"pryra1", password: "21yxr4y98", loginStatus: "Accessing")
+
+if user1.verifyLogin(customers: customers,user: user1)
+{
+    //user1.loginStatus = "Active"
+    print("Welcome: \(user1.custName)")
+}
+else
+{
+    print(user1.loginStatus)
+    
+}
+
+//4.-
 
 
-cust1.display()
 
 
-var u = User(userId: "1", password: "22", loginStatus: "")
+print("End of program")
+
+
+
+
 
 
 
