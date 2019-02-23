@@ -15,8 +15,8 @@ class Customer: User
     private var _address: String?
     private var _email: String?
     private var _creditCardInfo: String?
-    private var  _shippingInfo: String?
-    private var _shopinCart: [ShoppingCart]
+    private var _shippingInfo: String?
+    private var _shopinCart: [ShoppingCart]?
     
     
     var custName: String{
@@ -51,7 +51,7 @@ class Customer: User
             _shippingInfo = newValue
         }
     }
-    var shoppinCart: [ShoppingCart]{
+   /* var shoppinCart: [ShoppingCart]{
         get{
             return _shopinCart
         }
@@ -59,6 +59,7 @@ class Customer: User
             _shopinCart = newValue
         }
     }
+ */
     override init()
     {
     self._custName = String()
@@ -70,8 +71,8 @@ class Customer: User
     super.init()
     }
     
-    init(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String, shopCart: [ShoppingCart])
-{
+    /*init(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String, shopCart: [ShoppingCart])
+    {
     self._custName = CustomerName
     self._address = Address
     self._email = eMail
@@ -79,11 +80,24 @@ class Customer: User
     self._shippingInfo = ShippingInfo
     self._shopinCart = shopCart
     super.init(userId: userId, password: password, loginStatus: loginStatus)
-}
+    }
+    */
     
-    func register()
+    func register(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String) -> Bool
     {
         
+        // Validations
+        
+        self._custName = CustomerName
+        self._address = Address
+        self._email = eMail
+        self._creditCardInfo = CreditCardInfo
+        self._shippingInfo = ShippingInfo
+        super.userId = userId
+        super.password = password
+        super.loginStatus = loginStatus
+        
+        return true
     }
     
     func login()

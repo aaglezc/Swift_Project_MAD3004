@@ -46,8 +46,9 @@ class Administrator: User
         super.init(userId: userId,password: password,loginStatus: loginStatus)
     }
     
-    func updateCatalog() -> Bool
+    func updateCatalog(products: [Product], updProduct:Product) -> Bool
     {
+        //search for the produc ID 
             return true
     }
     

@@ -12,35 +12,40 @@ import Foundation
 class User
 {
     
-     private var _userId: String
-     private var _password: String
-     private var _loginStatus: String
-    
-    
+    private var _userId: String
+    private var _password: String
+    private var _loginStatus: String
     
     var userId: String
     {
-        get {
+        get
+        {
             return _userId
         }
-        set{
+        set
+        {
             _userId = newValue
         }
     }
+    
     var password: String{
-        get {
+        get
+        {
             return _password
         }
         set{
             _password = newValue
         }
     }
-    var loginStatus: String{
-        
-        get{
+    
+    var loginStatus: String
+    {
+        get
+        {
             return _loginStatus
         }
-        set{
+        set
+        {
             _loginStatus = newValue
         }
     }
