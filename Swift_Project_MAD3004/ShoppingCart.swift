@@ -10,26 +10,62 @@ import Foundation
 
 class ShoppingCart
 {
-    var cartId: Int?
-    var productId: Int?
-    var quantity: Int?
-    var dateAdded: String
+    private var _cartId: Int?
+    private var _productId: Int?
+    private var _quantity: Int?
+    private var _dateAdded: String
     
+    var cartId: Int
+    {
+        get {
+            return _cartId!
+        }
+        set{
+            _cartId = newValue
+        }
+    }
+    var productId: Int
+    {
+        get {
+            return _productId!
+        }
+        set{
+            _productId = newValue
+        }
+    }
+    var quantity: Int
+    {
+        get {
+            return _quantity!
+        }
+        set{
+            _quantity = newValue
+        }
+    }
+    var dateAdded: String
+    {
+        get {
+            return _dateAdded
+        }
+        set{
+            _dateAdded = newValue
+        }
+    }
     init()
     {
-        self.cartId = Int()
-        self.productId = Int()
-        self.quantity = Int()
-        self.dateAdded = String()
+        self._cartId = Int()
+        self._productId = Int()
+        self._quantity = Int()
+        self._dateAdded = String()
     }
     
     
     init(cartId: Int, productId: Int, quantity: Int, dateAdded: String)
     {
-        self.cartId = cartId
-        self.productId = productId
-        self.quantity = quantity
-        self.dateAdded = dateAdded
+        self._cartId = cartId
+        self._productId = productId
+        self._quantity = quantity
+        self._dateAdded = dateAdded
         
     }
     
@@ -56,10 +92,10 @@ class ShoppingCart
     func display()
     {
         print("************Shopping Cart Details*************")
-        print("Order ID: \(self.cartId!)")
-        print("Order Date: \(String(describing: self.productId))")
-        print("Shipping Date: \(String(describing: self.quantity))")
-        print("Customer Name: \(self.dateAdded)")
+        print("Cart ID: \(self._cartId!)")
+        print("Product ID: \(String(describing: self._productId!))")
+        print("Quantity: \(String(describing: self._quantity!))")
+        print("Date Added: \(self._dateAdded)")
         
         
         
