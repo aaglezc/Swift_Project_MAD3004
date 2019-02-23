@@ -56,5 +56,16 @@ class Customer: User
     {
         
     }
+    
+    func display()
+    {
+        print("************Customer Details*************")
+        print("Customer Name: \(self.custName!)")
+        print("Address: \(self.address!)")
+        print("eMail Address: \(self.email!)")
+        print("Credit Card Information: \(self.creditCardInfo!)")
+        print("Shipping Information: \(self.shippingInfo!)")
+        print("Shoping Cart Information: \(self.shopinCart)")
+    }
 }
 

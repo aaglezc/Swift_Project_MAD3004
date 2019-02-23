@@ -13,18 +13,18 @@ class ShoppingCart
     var cartId: Int?
     var productId: Int?
     var quantity: Int?
-    var dateAdded: Date
+    var dateAdded: String
     
     init()
     {
         self.cartId = Int()
         self.productId = Int()
         self.quantity = Int()
-        self.dateAdded = Date()
+        self.dateAdded = String()
     }
     
     
-    init(cartId: Int, productId: Int, quantity: Int, dateAdded: Date)
+    init(cartId: Int, productId: Int, quantity: Int, dateAdded: String)
     {
         self.cartId = cartId
         self.productId = productId
@@ -50,6 +50,18 @@ class ShoppingCart
     
     func checkOut()
     {
+        
+    }
+    
+    func display()
+    {
+        print("************Shopping Cart Details*************")
+        print("Order ID: \(self.cartId!)")
+        print("Order Date: \(String(describing: self.productId))")
+        print("Shipping Date: \(String(describing: self.quantity))")
+        print("Customer Name: \(self.dateAdded)")
+        
+        
         
     }
 }

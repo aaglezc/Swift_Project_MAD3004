@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B41536B2220BB630037DC78 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41536A2220BB630037DC78 /* Customer.swift */; };
 		9B41536D2220C07E0037DC78 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41536C2220C07E0037DC78 /* ShoppingCart.swift */; };
+		9B41536F2220C63C0037DC78 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41536E2220C63C0037DC78 /* Orders.swift */; };
+		9B4153712220CF6B0037DC78 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4153702220CF6B0037DC78 /* DateFormatting.swift */; };
 		9B5B21AC221F86B80072670D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AB221F86B80072670D /* User.swift */; };
 		9B5B21AE221F89840072670D /* Administrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AD221F89840072670D /* Administrator.swift */; };
 		9BC7B400221CC30A006610B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC7B3FF221CC30A006610B6 /* main.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		9B41536A2220BB630037DC78 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = Swift_Project_MAD3004/Customer.swift; sourceTree = SOURCE_ROOT; };
 		9B41536C2220C07E0037DC78 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoppingCart.swift; path = Swift_Project_MAD3004/ShoppingCart.swift; sourceTree = SOURCE_ROOT; };
+		9B41536E2220C63C0037DC78 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Orders.swift; path = Swift_Project_MAD3004/Orders.swift; sourceTree = SOURCE_ROOT; };
+		9B4153702220CF6B0037DC78 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatting.swift; path = Swift_Project_MAD3004/DateFormatting.swift; sourceTree = SOURCE_ROOT; };
 		9B5B21AB221F86B80072670D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Swift_Project_MAD3004/User.swift; sourceTree = SOURCE_ROOT; };
 		9B5B21AD221F89840072670D /* Administrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Administrator.swift; path = Swift_Project_MAD3004/Administrator.swift; sourceTree = SOURCE_ROOT; };
 		9BC7B3FC221CC30A006610B6 /* Swift_Project_MAD3004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift_Project_MAD3004; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,7 @@
 				9B5B21AD221F89840072670D /* Administrator.swift */,
 				9B41536A2220BB630037DC78 /* Customer.swift */,
 				9B41536C2220C07E0037DC78 /* ShoppingCart.swift */,
+				9B41536E2220C63C0037DC78 /* Orders.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 		9BC7B408221CC354006610B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9B4153702220CF6B0037DC78 /* DateFormatting.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B41536F2220C63C0037DC78 /* Orders.swift in Sources */,
 				9B41536D2220C07E0037DC78 /* ShoppingCart.swift in Sources */,
+				9B4153712220CF6B0037DC78 /* DateFormatting.swift in Sources */,
 				9B5B21AE221F89840072670D /* Administrator.swift in Sources */,
 				9B5B21AC221F86B80072670D /* User.swift in Sources */,
 				9BC7B400221CC30A006610B6 /* main.swift in Sources */,
