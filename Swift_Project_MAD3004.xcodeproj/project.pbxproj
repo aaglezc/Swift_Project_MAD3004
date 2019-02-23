@@ -73,6 +73,7 @@
 		9BC7B3FE221CC30A006610B6 /* Swift_Project_MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
+				9BC7B3FF221CC30A006610B6 /* main.swift */,
 				9BC7B408221CC354006610B6 /* Extensions */,
 				9BC7B406221CC32C006610B6 /* Classes */,
 			);
@@ -88,7 +89,6 @@
 				9B41536C2220C07E0037DC78 /* ShoppingCart.swift */,
 				9B41536E2220C63C0037DC78 /* Orders.swift */,
 				9BEBC4EC2220CE930045A9EB /* Product.swift */,
-				9BC7B3FF221CC30A006610B6 /* main.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
