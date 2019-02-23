@@ -12,27 +12,55 @@ import Foundation
 class User
 {
     
-     var userId: String
-     var password: String
-     var loginStatus: String
+     private var _userId: String
+     private var _password: String
+     private var _loginStatus: String
     
+    
+    
+    var userId: String
+    {
+        get {
+            return _userId
+        }
+        set{
+            _userId = newValue
+        }
+    }
+    var password: String{
+        get {
+            return _password
+        }
+        set{
+            _password = newValue
+        }
+    }
+    var loginStatus: String{
+        
+        get{
+            return _loginStatus
+        }
+        set{
+            _loginStatus = newValue
+        }
+    }
     
     init()
     {
-        self.userId = String()
-        self.password = String()
-        self.loginStatus = String()
+        self._userId = String()
+        self._password = String()
+        self._loginStatus = String()
     }
     
     
     init(userId: String, password: String, loginStatus: String)
     {
-        self.userId = userId
-        self.password = password
-        self.loginStatus = loginStatus
+        self._userId = userId
+        self._password = password
+        self._loginStatus = loginStatus
         
     }
-    
+   
     func verifyLogin() -> Bool
     {
         return true

@@ -11,21 +11,38 @@ import Foundation
 
 class Administrator: User
 {
-    var adminName: String?
-    var email: String?
+   private var _adminName: String?
+    private var _email: String?
     
+    var adminName: String{
+        get{
+            return _adminName!
+        }
+        set{
+            _adminName = newValue
+        }
+    }
+    var email: String{
+        get{
+            return _email!
+        }
+        set{
+            _email = newValue
+        }
+    }
+
     
     override init()
     {
-        self.adminName = String()
-        self.email = String()
+        self._adminName = String()
+        self._email = String()
         super.init()
     }
     
     init(adminName: String, email: String, userId: String, password: String, loginStatus: String)
     {
-        self.adminName = adminName
-        self.email = email
+        self._adminName = adminName
+        self._email = email
         super.init(userId: userId,password: password,loginStatus: loginStatus)
     }
     

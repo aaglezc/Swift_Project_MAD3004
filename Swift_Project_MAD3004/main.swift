@@ -20,7 +20,7 @@ print("User Id: ",u1.userId)
 var a1 = Administrator(adminName: "Priya Aggarwal", email: "priya123@gmail.com", userId: "Priya", password: "Priya123" , loginStatus: "Active")
 
 
-print("Admin Name: ", a1.adminName!)
+print("Admin Name: ", a1.adminName)
 
 
 /*let formatter = DateFormatter()
@@ -49,3 +49,11 @@ product3.display()
 product4.display()
 product5.display()
 
+var U1 = User(userId: "U00282", password: "kqkhqlj", loginStatus: "Active")
+U1.loginStatus = "gdgfngm"
+print(U1.loginStatus)
+
+
+var a2 = Administrator(adminName: "HSNsaod", email: "ewhleo", userId: "euysk", password: "hewrhr", loginStatus: "fgjasjdh")
+a2.adminName = "wqw[ow[o"
+print(a2.adminName)
