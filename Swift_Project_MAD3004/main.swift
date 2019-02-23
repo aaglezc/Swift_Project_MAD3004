@@ -136,7 +136,7 @@ if !user1.updateProfile(customers: customers)
 }
 
 //5.- customer add 4 products to
-var carItem1 = ShoppingCart(
+var carItem1 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: "")
 
 
 

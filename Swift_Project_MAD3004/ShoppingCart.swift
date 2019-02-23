@@ -13,7 +13,7 @@ class ShoppingCart
     private var _cartId: Int?
     private var _productId: Product?
     private var _quantity: Int?
-    private var _dateAdded: String
+    private var _dateAdded: Date
     
     var cartId: Int
     {
@@ -42,7 +42,7 @@ class ShoppingCart
             _quantity = newValue
         }
     }
-    var dateAdded: String
+    var dateAdded: Date
     {
         get {
             return _dateAdded
@@ -56,11 +56,11 @@ class ShoppingCart
         self._cartId = Int()
         self._productId = Product()
         self._quantity = Int()
-        self._dateAdded = String()
+        self._dateAdded = Date()
     }
     
     
-    init(cartId: Int, productId: Product, quantity: Int, dateAdded: String)
+    init(cartId: Int, productId: Product, quantity: Int, dateAdded: Date)
     {
         self._cartId = cartId
         self._productId = productId
