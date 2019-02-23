@@ -51,6 +51,14 @@ class Customer: User
             _shippingInfo = newValue
         }
     }
+    var creditCardInfo:String{
+        get{
+            return _creditCardInfo!
+        }
+        set{
+            _creditCardInfo = newValue
+        }
+    }
    /* var shoppinCart: [ShoppingCart]{
         get{
             return _shopinCart
@@ -71,17 +79,10 @@ class Customer: User
     super.init()
     }
     
-    /*init(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String, shopCart: [ShoppingCart])
+    override init(userId: String, password: String, loginStatus: String)
     {
-    self._custName = CustomerName
-    self._address = Address
-    self._email = eMail
-    self._creditCardInfo = CreditCardInfo
-    self._shippingInfo = ShippingInfo
-    self._shopinCart = shopCart
-    super.init(userId: userId, password: password, loginStatus: loginStatus)
+        super.init(userId: userId, password: password, loginStatus: loginStatus)
     }
-    */
     
     func register(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String) -> Bool
     {
