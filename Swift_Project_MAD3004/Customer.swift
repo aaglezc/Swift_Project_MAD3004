@@ -96,7 +96,7 @@ class Customer: User
         self._shippingInfo = ShippingInfo
         super.userId = userId
         super.password = password
-        super.loginStatus = loginStatus
+        //super.loginStatus = loginStatus
         
         return true
     }
