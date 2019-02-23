@@ -97,7 +97,7 @@ var customers = [Customer]()
 
 var cust1 = Customer()
 var cust2 = Customer()
-var success = cust1.register(CustomerName: "Priyra M.", Address: "123 Jane St.", eMail: "priyra@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+var success = cust1.register(CustomerName: "Priyra", Address: "123 Jane St.", eMail: "priyra@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
 if success
 {
     customers.append(cust1)
@@ -127,7 +127,19 @@ else
     
 }
 
-//4.-
+//4.-Update customer info
+user1.address = "34 Scarlet St, ON CA"
+user1.custName = "Priyra M."
+
+if !user1.updateProfile(customers: customers)
+{
+    print("Update Record Failed")
+}
+
+
+
+
+
 
 
 

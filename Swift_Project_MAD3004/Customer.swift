@@ -106,9 +106,26 @@ class Customer: User
         
     }
     
-    func updateProfile()
+    func updateProfile(customers:[Customer]) -> Bool
     {
-        
+        //Validate customer.userId and customer.password in customers
+        for i in customers
+        {
+            if i.userId == self.userId
+            {
+                i.custName       = self.custName
+                i.address        = self.address
+                i.email          = self.email
+                i.shippingInfo   = self.shippingInfo
+                i.creditCardInfo = self.creditCardInfo
+                i.loginStatus    = "Profile Updated"
+                print("---------------Profile Updated---------------")
+                i.display()
+                return true
+            }
+            
+        }
+        return false
     }
     
     func display()
