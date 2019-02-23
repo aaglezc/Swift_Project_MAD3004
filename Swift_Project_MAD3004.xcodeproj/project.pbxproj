@@ -73,9 +73,9 @@
 		9BC7B3FE221CC30A006610B6 /* Swift_Project_MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
+				9BC7B3FF221CC30A006610B6 /* main.swift */,
 				9BC7B408221CC354006610B6 /* Extensions */,
 				9BC7B406221CC32C006610B6 /* Classes */,
-				9BC7B3FF221CC30A006610B6 /* main.swift */,
 			);
 			path = Swift_Project_MAD3004;
 			sourceTree = "<group>";
@@ -85,12 +85,10 @@
 			children = (
 				9B5B21AB221F86B80072670D /* User.swift */,
 				9B5B21AD221F89840072670D /* Administrator.swift */,
-
 				9B41536A2220BB630037DC78 /* Customer.swift */,
 				9B41536C2220C07E0037DC78 /* ShoppingCart.swift */,
 				9B41536E2220C63C0037DC78 /* Orders.swift */,
 				9BEBC4EC2220CE930045A9EB /* Product.swift */,
-
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -170,7 +168,6 @@
 				9BC7B400221CC30A006610B6 /* main.swift in Sources */,
 				9B41536B2220BB630037DC78 /* Customer.swift in Sources */,
 				9B5B21B0221F8DBB0072670D /* Protocols.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
