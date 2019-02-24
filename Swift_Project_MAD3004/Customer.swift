@@ -16,7 +16,7 @@ class Customer: User
     private var _email: String?
     private var _creditCardInfo: String?
     private var _shippingInfo: String?
-    private var _shoppinCart: [ShoppingCart]?
+    private var _shoppingCart: [ShoppingCart]
     
     
     var custName: String{
@@ -43,31 +43,40 @@ class Customer: User
             _email = newValue
         }
     }
-    var shippingInfo:String{
-        get{
+    var shippingInfo:String
+    {
+        get
+        {
             return _shippingInfo!
         }
-        set{
+        set
+        {
             _shippingInfo = newValue
         }
     }
-    var creditCardInfo:String{
-        get{
+    var creditCardInfo:String
+    {
+        get
+        {
             return _creditCardInfo!
         }
-        set{
+        set
+        {
             _creditCardInfo = newValue
         }
     }
-   /* var shoppinCart: [ShoppingCart]{
-        get{
-            return _shopinCart
+    var shoppingCart: [ShoppingCart]
+    {
+        get
+        {
+            return _shoppingCart
         }
-        set{
-            _shopinCart = newValue
+        set
+        {
+            _shoppingCart = newValue
         }
     }
- */
+ 
     override init()
     {
     self._custName = String()
@@ -75,13 +84,15 @@ class Customer: User
     self._email = String()
     self._creditCardInfo = String()
     self._shippingInfo = String()
-    self._shoppinCart = [ShoppingCart] ()
+    self._shoppingCart = [ShoppingCart]()
     super.init()
     }
     
     override init(userId: String, password: String, loginStatus: String)
     {
+        self._shoppingCart = [ShoppingCart]()
         super.init(userId: userId, password: password, loginStatus: loginStatus)
+        
     }
     
     func register(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String) -> Bool
@@ -128,10 +139,7 @@ class Customer: User
         return false
     }
     
-    func addCartItem(cartItem: ShoppingCart)
-    {
-      self._shoppinCart?.append(cartItem)
-    }
+   
     
     
     

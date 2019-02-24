@@ -135,8 +135,30 @@ if !user1.updateProfile(customers: customers)
     print("Update Record Failed")
 }
 
-//5.- customer add 4 products to
-var carItem1 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: "")
+//5.- customer add 5 products to
+var cartItem1 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
+cartItem1.addCartItem(customer: user1)
+
+var cartItem2 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
+cartItem1.addCartItem(customer: user1)
+
+var cartItem3 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
+cartItem1.addCartItem(customer: user1)
+
+var cartItem4 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
+cartItem1.addCartItem(customer: user1)
+
+var cartItem5 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
+cartItem1.addCartItem(customer: user1)
+
+//user1.display()
+
+print("\n displaying Items:")
+for c in user1.shoppingCart
+{
+    c.display()
+}
+
 
 
 

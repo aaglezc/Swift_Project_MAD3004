@@ -69,9 +69,10 @@ class ShoppingCart
         
     }
     
-    func addCartItem()
+    func addCartItem(customer : Customer)
     {
-        
+        let dd = ShoppingCart(cartId: self._cartId!, productId: self._productId!, quantity: self._quantity!, dateAdded: self._dateAdded)
+        customer.shoppingCart.append(dd)
     }
     
     func updateQuantity()
