@@ -165,7 +165,11 @@ if !cartItem5.updateQuantity(customer: user1, newQty: 2)
 {
     print("Update Failed")
 }
-
+print("Display List Updated")
+for c in user1.shoppingCart
+{
+    c.display()
+}
 
 
 

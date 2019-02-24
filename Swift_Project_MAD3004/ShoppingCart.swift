@@ -83,7 +83,7 @@ class ShoppingCart
             print("Item:",c._productId!.ProductId)
             if c._cartId == self._cartId
             {
-                self._quantity = newQty
+                c._quantity = newQty
                 return true
             }
         }
@@ -104,7 +104,7 @@ class ShoppingCart
     {
         print("************Shopping Cart Details*************")
         print("Cart ID: \(self._cartId!)")
-        print("Product ID: \(String(describing: self._productId!))")
+        print("Product ID: \(String(describing: self._productId!.ProductId)) - \(String(describing: self._productId!.ProductName))")
         print("Quantity: \(String(describing: self._quantity!))")
         print("Date Added: \(self._dateAdded)")
         
