@@ -139,9 +139,6 @@ class Customer: User
         return false
     }
     
-   
-    
-    
     
     func display()
     {

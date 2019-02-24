@@ -75,9 +75,19 @@ class ShoppingCart
         customer.shoppingCart.append(dd)
     }
     
-    func updateQuantity()
+    func updateQuantity(customer : Customer, newQty : Int) -> Bool
     {
-        
+        print("Customer Items------>:")
+        for c in customer.shoppingCart
+        {
+            print("Item:",c._productId!.ProductId)
+            if c._cartId == self._cartId
+            {
+                self._quantity = newQty
+                return true
+            }
+        }
+        return false
     }
     
     func cartDetails()

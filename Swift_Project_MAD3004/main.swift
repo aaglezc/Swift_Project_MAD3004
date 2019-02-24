@@ -139,17 +139,17 @@ if !user1.updateProfile(customers: customers)
 var cartItem1 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
 cartItem1.addCartItem(customer: user1)
 
-var cartItem2 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
-cartItem1.addCartItem(customer: user1)
+var cartItem2 = ShoppingCart(cartId: 2, productId: pr2, quantity: 1, dateAdded: Date())
+cartItem2.addCartItem(customer: user1)
 
-var cartItem3 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
-cartItem1.addCartItem(customer: user1)
+var cartItem3 = ShoppingCart(cartId: 3, productId: pr3, quantity: 1, dateAdded: Date())
+cartItem3.addCartItem(customer: user1)
 
-var cartItem4 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
-cartItem1.addCartItem(customer: user1)
+var cartItem4 = ShoppingCart(cartId: 4, productId: pr4, quantity: 3, dateAdded: Date())
+cartItem4.addCartItem(customer: user1)
 
-var cartItem5 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
-cartItem1.addCartItem(customer: user1)
+var cartItem5 = ShoppingCart(cartId: 5, productId: pr5, quantity: 5, dateAdded: Date())
+cartItem5.addCartItem(customer: user1)
 
 //user1.display()
 
@@ -160,6 +160,11 @@ for c in user1.shoppingCart
 }
 
 
+//6.- Customer update quantity of 1 product
+if !cartItem5.updateQuantity(customer: user1, newQty: 2)
+{
+    print("Update Failed")
+}
 
 
 
