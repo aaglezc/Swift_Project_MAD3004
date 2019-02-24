@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 print("-----------------Swift Project_MAD 3004-------------")
 
 var u1 = User(userId: "Priya", password: "Priya123" , loginStatus: "Active")
@@ -63,3 +63,126 @@ print(s1.cartId)
 var o1 = Order(orId: 2001, dtCreate: "2019/01/01" , dtShip: "2019/01/03", cxName: "Mandeep Kaur", cxId: "C0747798", Status: "Ready to Ship", ShippinId: "S0747798")
 o1.display()
 print(o1.CustomerID)
+*/
+//------------------------------------------- Main Script
+var p1 = Product(productId: 1, productName: "33", Price: 30.0)
+p1.Price = 45
+print(p1.Price)
+
+//1.- Creating Administrator user
+var adm1 = Administrator(adminName: "Arthur", email: "aaglezc@gmail.com", userId: "aaglezc", password: "abc")
+
+//1.5. Creating product catalog
+var pr1 = Product(productId: 01, productName: "Hard Drive",Price: 100)
+var pr2 = Product(productId: 02, productName: "Zip Drive", Price: 150)
+var pr3 = Product(productId: 03, productName: "Compact Disk", Price: 2)
+var pr4 = Product(productId: 04, productName: "Monitor", Price: 120)
+var pr5 = Product(productId: 05, productName: "Iphone 7 plus", Price: 800)
+var products = [Product]()
+products.append(pr1)
+products.append(pr2)
+products.append(pr3)
+products.append(pr4)
+products.append(pr5)
+
+//1.8 Updating 1 product form Catalog
+let prUdpdated = Product(productId: 05, productName: "Iphone 7 Plus", Price: 750)
+if adm1.updateCatalog(products: products, updProduct: prUdpdated)
+{
+print("Product Updated Succesfully")
+}
+
+//2.- Creating customer users
+var customers = [Customer]()
+
+var cust1 = Customer()
+var cust2 = Customer()
+var success = cust1.register(CustomerName: "Priyra", Address: "123 Jane St.", eMail: "priyra@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+if success
+{
+    customers.append(cust1)
+}
+success = cust2.register(CustomerName: "Mandeep K.", Address: "56 Dixie Rd.", eMail: "mdeepabc@mail.com", CreditCardInfo: "1644 4747 3354 5541", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+if success
+{
+    customers.append(cust2)
+}
+
+for i in customers
+{
+    i.display()
+}
+
+//3.- Accesing with user info
+var user1 = Customer(userId:"pryra1", password: "21yxr4y98", loginStatus: "Accessing")
+
+if user1.verifyLogin(customers: customers,user: user1)
+{
+    //user1.loginStatus = "Active"
+    print("Welcome: \(user1.custName)")
+}
+else
+{
+    print(user1.loginStatus)
+}
+
+//4.-Update customer info
+user1.address = "34 Scarlet St, ON CA"
+user1.custName = "Priyra M."
+
+if !user1.updateProfile(customers: customers)
+{
+    print("Update Record Failed")
+}
+
+//5.- customer add 5 products to
+var cartItem1 = ShoppingCart(cartId: 1, productId: pr1, quantity: 2, dateAdded: Date())
+cartItem1.addCartItem(customer: user1)
+
+var cartItem2 = ShoppingCart(cartId: 2, productId: pr2, quantity: 1, dateAdded: Date())
+cartItem2.addCartItem(customer: user1)
+
+var cartItem3 = ShoppingCart(cartId: 3, productId: pr3, quantity: 1, dateAdded: Date())
+cartItem3.addCartItem(customer: user1)
+
+var cartItem4 = ShoppingCart(cartId: 4, productId: pr4, quantity: 3, dateAdded: Date())
+cartItem4.addCartItem(customer: user1)
+
+var cartItem5 = ShoppingCart(cartId: 5, productId: pr5, quantity: 5, dateAdded: Date())
+cartItem5.addCartItem(customer: user1)
+
+//user1.display()
+
+print("\n displaying Items:")
+for c in user1.shoppingCart
+{
+    c.display()
+}
+
+
+//6.- Customer update quantity of 1 product
+if !cartItem5.updateQuantity(customer: user1, newQty: 2)
+{
+    print("Update Failed")
+}
+print("Display List Updated")
+for c in user1.shoppingCart
+{
+    c.display()
+}
+
+
+
+
+
+
+
+print("End of program")
+
+
+
+
+
+
+
+ 

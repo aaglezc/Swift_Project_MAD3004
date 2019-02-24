@@ -39,15 +39,16 @@ class Administrator: User
         super.init()
     }
     
-    init(adminName: String, email: String, userId: String, password: String, loginStatus: String)
+    init(adminName: String, email: String, userId: String, password: String)
     {
         self._adminName = adminName
         self._email = email
-        super.init(userId: userId,password: password,loginStatus: loginStatus)
+        super.init(userId: userId,password: password,loginStatus: "Active")
     }
     
-    func updateCatalog() -> Bool
+    func updateCatalog(products: [Product], updProduct:Product) -> Bool
     {
+        //search for the produc ID 
             return true
     }
     

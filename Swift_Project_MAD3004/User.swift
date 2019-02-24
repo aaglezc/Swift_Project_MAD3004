@@ -12,35 +12,40 @@ import Foundation
 class User
 {
     
-     private var _userId: String
-     private var _password: String
-     private var _loginStatus: String
-    
-    
+    private var _userId: String
+    private var _password: String
+    private var _loginStatus: String
     
     var userId: String
     {
-        get {
+        get
+        {
             return _userId
         }
-        set{
+        set
+        {
             _userId = newValue
         }
     }
+    
     var password: String{
-        get {
+        get
+        {
             return _password
         }
         set{
             _password = newValue
         }
     }
-    var loginStatus: String{
-        
-        get{
+    
+    var loginStatus: String
+    {
+        get
+        {
             return _loginStatus
         }
-        set{
+        set
+        {
             _loginStatus = newValue
         }
     }
@@ -49,7 +54,7 @@ class User
     {
         self._userId = String()
         self._password = String()
-        self._loginStatus = String()
+        self._loginStatus = "Registered"
     }
     
     
@@ -61,9 +66,24 @@ class User
         
     }
    
-    func verifyLogin() -> Bool
+    func verifyLogin(customers:[Customer], user : Customer) -> Bool
     {
-        return true
+        //Validate customer.userId and customer.password in customers
+        for i in customers
+        {
+            if i._userId == user._userId
+            {
+                user.custName       = i.custName
+                user.address        = i.address
+                user.email          = i.email
+                user.shippingInfo   = i.shippingInfo
+                user.creditCardInfo = i.creditCardInfo
+                user._loginStatus    = "Active"
+                return true
+            }
+        }
+        user._loginStatus    = "Access Denied"
+        return false
     }
     
 

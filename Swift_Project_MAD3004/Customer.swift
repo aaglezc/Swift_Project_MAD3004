@@ -15,8 +15,8 @@ class Customer: User
     private var _address: String?
     private var _email: String?
     private var _creditCardInfo: String?
-    private var  _shippingInfo: String?
-    private var _shopinCart: [ShoppingCart]
+    private var _shippingInfo: String?
+    private var _shoppingCart: [ShoppingCart]
     
     
     var custName: String{
@@ -43,22 +43,40 @@ class Customer: User
             _email = newValue
         }
     }
-    var shippingInfo:String{
-        get{
+    var shippingInfo:String
+    {
+        get
+        {
             return _shippingInfo!
         }
-        set{
+        set
+        {
             _shippingInfo = newValue
         }
     }
-    var shoppinCart: [ShoppingCart]{
-        get{
-            return _shopinCart
+    var creditCardInfo:String
+    {
+        get
+        {
+            return _creditCardInfo!
         }
-        set{
-            _shopinCart = newValue
+        set
+        {
+            _creditCardInfo = newValue
         }
     }
+    var shoppingCart: [ShoppingCart]
+    {
+        get
+        {
+            return _shoppingCart
+        }
+        set
+        {
+            _shoppingCart = newValue
+        }
+    }
+ 
     override init()
     {
     self._custName = String()
@@ -66,24 +84,32 @@ class Customer: User
     self._email = String()
     self._creditCardInfo = String()
     self._shippingInfo = String()
-    self._shopinCart = [ShoppingCart] ()
+    self._shoppingCart = [ShoppingCart]()
     super.init()
     }
     
-    init(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String, shopCart: [ShoppingCart])
-{
-    self._custName = CustomerName
-    self._address = Address
-    self._email = eMail
-    self._creditCardInfo = CreditCardInfo
-    self._shippingInfo = ShippingInfo
-    self._shopinCart = shopCart
-    super.init(userId: userId, password: password, loginStatus: loginStatus)
-}
+    override init(userId: String, password: String, loginStatus: String)
+    {
+        self._shoppingCart = [ShoppingCart]()
+        super.init(userId: userId, password: password, loginStatus: loginStatus)
+        
+    }
     
-    func register()
+    func register(CustomerName: String, Address: String, eMail: String, CreditCardInfo: String, ShippingInfo: String, userId: String, password: String, loginStatus: String) -> Bool
     {
         
+        // Validations
+        
+        self._custName = CustomerName
+        self._address = Address
+        self._email = eMail
+        self._creditCardInfo = CreditCardInfo
+        self._shippingInfo = ShippingInfo
+        super.userId = userId
+        super.password = password
+        //super.loginStatus = loginStatus
+        
+        return true
     }
     
     func login()
@@ -91,10 +117,28 @@ class Customer: User
         
     }
     
-    func updateProfile()
+    func updateProfile(customers:[Customer]) -> Bool
     {
-        
+        //Validate customer.userId and customer.password in customers
+        for i in customers
+        {
+            if i.userId == self.userId
+            {
+                i.custName       = self.custName
+                i.address        = self.address
+                i.email          = self.email
+                i.shippingInfo   = self.shippingInfo
+                i.creditCardInfo = self.creditCardInfo
+                i.loginStatus    = "Profile Updated"
+                print("---------------Profile Updated---------------")
+                i.display()
+                return true
+            }
+            
+        }
+        return false
     }
+    
     
     func display()
     {
@@ -104,7 +148,6 @@ class Customer: User
         print("eMail Address: \(self._email!)")
         print("Credit Card Information: \(self._creditCardInfo!)")
         print("Shipping Information: \(self._shippingInfo!)")
-        print("Shoping Cart Information: \(self._shopinCart)")
     }
 }
 
