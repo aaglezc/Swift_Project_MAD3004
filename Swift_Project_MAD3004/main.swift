@@ -180,9 +180,12 @@ for c in user1.shoppingCart
 print("End of program")
 
 
+///testing
+
+var shipping = ShippingInfo(shippingId: 801, shippingType: "Technology", shippingCost: 1999.20, shippingRegionId: 1)
 
 
-
+shipping.display()
 
 
  
