@@ -11,12 +11,12 @@ import Foundation
 class Order
 {
     private var _orderId: Int?
-    private var _DateCreated: String
-    private var _DateShipped : String
+    private var _dateCreated: String
+    private var _dateShipped : String
     private var _customerName: String
     private var _customerId: String
-    private var _Status: String
-    private var _ShippingId: String
+    private var _status: String
+    private var _shippingInfo : ShippingInfo
     
    
     var orderId: Int{
@@ -29,18 +29,18 @@ class Order
     }
     var DateCreated: String{
         get{
-            return _DateCreated
+            return _dateCreated
         }
         set{
-            _DateCreated = newValue
+            _dateCreated = newValue
         }
     }
     var DateShipped: String{
         get{
-            return _DateShipped
+            return _dateShipped
         }
         set{
-            _DateShipped = newValue
+            _dateShipped = newValue
         }
     }
     var CustomerName:String{
@@ -61,42 +61,45 @@ class Order
     }
     var Status: String{
         get{
-            return _Status
+            return _status
         }
         set{
-            _Status = newValue
+            _status = newValue
         }
     }
-    var ShippingID: String{
+    var ShippingID: ShippingInfo
+    {
         get{
-            return _ShippingId
+            return _shippingInfo
         }
         set{
-            _ShippingId = newValue
+            _shippingInfo = newValue
         }
     }
     
     init()
     {
         self._orderId       = 0
-        self._DateCreated = String()
-        self._DateShipped = String()
+        self._dateCreated = String()
+        self._dateShipped = String()
         self._customerName = String()
         self._customerId = String()
-        self._Status = String()
-        self._ShippingId = String()
+        self._status = String()
+        self._shippingInfo = ShippingInfo()
         
     }
+    
     init (orId: Int, dtCreate: String, dtShip: String, cxName: String, cxId: String, Status: String, ShippinId: String)
     {
         self._orderId = orId
-        self._DateCreated = dtCreate
-        self._DateShipped = dtShip
+        self._dateCreated = dtCreate
+        self._dateShipped = dtShip
         self._customerName = cxName
         self._customerId = cxId
-        self._Status = Status
-        self._ShippingId = ShippinId
+        self._status = Status
+        self._shippingInfo = ShippingInfo()
     }
+    
     func placeOrder()
     {
         
@@ -106,12 +109,12 @@ class Order
     {
         print("************Order Details*************")
         print("Order ID: \(self._orderId!)")
-        print("Order Date: \(self._DateCreated)")
-        print("Shipping Date: \(self._DateShipped)")
+        print("Order Date: \(self._dateCreated)")
+        print("Shipping Date: \(self._dateShipped)")
         print("Customer Name: \(self._customerName)")
         print("Customer ID: \(self._customerId)")
-        print("Order Status: \(self._Status)")
-        print("Shipping ID: \(self._ShippingId)")
+        print("Order Status: \(self._status)")
+        //print("Shipping ID: \(self._shippingId)")
         
         
     }
