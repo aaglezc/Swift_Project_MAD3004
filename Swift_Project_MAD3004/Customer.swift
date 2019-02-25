@@ -17,6 +17,7 @@ class Customer: User
     private var _creditCardInfo: String?
     private var _shippingInfo: String?
     private var _shoppingCart: [ShoppingCart]
+    private var _orders : [Order]
     
     
     var custName: String{
@@ -77,6 +78,17 @@ class Customer: User
         }
     }
  
+    var orders: [Order]
+    {
+        get
+        {
+            return _orders
+        }
+        set
+        {
+            _orders = newValue
+        }
+    }
     override init()
     {
     self._custName = String()
@@ -85,12 +97,15 @@ class Customer: User
     self._creditCardInfo = String()
     self._shippingInfo = String()
     self._shoppingCart = [ShoppingCart]()
-    super.init()
+    self._orders = [Order]()
+    
+        super.init()
     }
     
     override init(userId: String, password: String, loginStatus: String)
     {
         self._shoppingCart = [ShoppingCart]()
+        self._orders = [Order]()
         super.init(userId: userId, password: password, loginStatus: loginStatus)
         
     }
