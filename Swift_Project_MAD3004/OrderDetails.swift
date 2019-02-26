@@ -100,8 +100,8 @@ func display()
     print("Product Id: \(self._productId)")
     print("Product Namet: \(self._productName)")
     print("Quantity: \(self._quantity)")
-    print("Unit Cost: \(self._unitCost)")
-    print("Sub Total: \(self._subTotal)")
+    print("Unit Cost: \(self._unitCost.currencyformat())")
+    print("Sub Total: \(self._subTotal.currencyformat())")
     
 }
 

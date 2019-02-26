@@ -18,3 +18,13 @@ extension Date
         return formattedDate
     }
 }
+
+extension Float
+{
+    func currencyformat() -> String
+    {
+        return "$\(self)"
+        
+    }
+    
+}
