@@ -108,7 +108,7 @@ class ShoppingCart
         print("Cart ID: \(self._cartId!)")
         print("Product ID: \(String(describing: self._productId!.ProductId)) - \(String(describing: self._productId!.ProductName))")
         print("Quantity: \(String(describing: self._quantity!))")
-        print("Date Added: \(self._dateAdded)")
+        print("Date Added: \(self._dateAdded.DateFormat())")
         
         
         
