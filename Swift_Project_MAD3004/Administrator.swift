@@ -48,8 +48,18 @@ class Administrator: User
     
     func updateCatalog(products: [Product], updProduct:Product) -> Bool
     {
-        //search for the produc ID 
-            return true
-    }
-    
+        for i in products
+        {
+            if i.ProductId == updProduct.ProductId
+            {
+                updProduct.ProductName = i.ProductName
+                updProduct.Price = i.Price
+                return true
+            }
+        
+       }
+        print("Product is not found!")
+                return false
 }
+}
+
