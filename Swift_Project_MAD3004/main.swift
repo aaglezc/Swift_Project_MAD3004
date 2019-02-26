@@ -67,7 +67,7 @@ print(o1.CustomerID)
 //------------------------------------------- Main Script
 var p1 = Product(productId: 1, productName: "33", Price: 30.0)
 p1.Price = 45
-print(p1.Price)
+//print(p1.Price)
 
 //1.- Creating Administrator user
 var adm1 = Administrator(adminName: "Arthur", email: "aaglezc@gmail.com", userId: "aaglezc", password: "abc")
@@ -89,12 +89,12 @@ products.append(pr5)
 let prUdpdated = Product(productId: 05, productName: "Iphone 7 Plus", Price: 750)
 
 //let prUdpdated = Product(productId: 06, productName: "Samsung", Price: 750)
-print("+++++++++++++++")
+print("-----------------------------------------")
 if adm1.updateCatalog(products: products, updProduct: prUdpdated)
 {
 print("Product Updated Succesfully")
 }
-
+print("-----------------------------------------")
 //2.- Creating customer users
 var customers = [Customer]()
 
@@ -178,7 +178,7 @@ for c in user1.shoppingCart
 
 
 //9.- customer call for Checkout
-print("--------------------testing Checkout")
+print("--------------------Testing Checkout")
 user1.checkOut()
 
 for o in user1.orders
