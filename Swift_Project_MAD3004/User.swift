@@ -82,11 +82,16 @@ class User
                 user.creditCardInfo = i.creditCardInfo
                 user._loginStatus    = "Active"
                 return true
-            }
+                }else{
+                    print("Invalid Password")
+                    return false
+                }
+                
             }
         }
     
          user._loginStatus    = "Access Denied"
+        user.email = "Incorrect eMail Address"
          return false
 }
 }

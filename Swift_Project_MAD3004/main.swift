@@ -97,12 +97,12 @@ var customers = [Customer]()
 
 var cust1 = Customer()
 var cust2 = Customer()
-var success = cust1.register(CustomerName: "Priyra", Address: "123 Jane St.", eMail: "priyra@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+var success = cust1.register(CustomerName: "Priyra", Address: "123 Jane St.", eMail: "priyra@mail.com", CreditCardInfo: "1234 4567 3534 5433", ShippingInfo: "Afds 6218 sajg", userId: "pryra1", password: "123", loginStatus: "Registered")
 if success
 {
     customers.append(cust1)
 }
-success = cust2.register(CustomerName: "Mandeep K.", Address: "56 Dixie Rd.", eMail: "mdeepabc@mail.com", CreditCardInfo: "1644 4747 3354 5541", ShippingInfo: "same address", userId: "pryra1", password: "123", loginStatus: "Registered")
+success = cust2.register(CustomerName: "Mandeep K.", Address: "56 Dixie Rd.", eMail: "mdeepabc@mail.com", CreditCardInfo: "1644 4747 3354 5541", ShippingInfo: "3463 morton way, Brampton", userId: "pryra1", password: "123", loginStatus: "Registered")
 if success
 {
     customers.append(cust2)
@@ -114,7 +114,7 @@ for i in customers
 }
 
 //3.- Accesing with user info
-var user1 = Customer(userId:"pryra1", password: "21yxr4y98", loginStatus: "Accessing")
+var user1 = Customer(userId:"pryra1", password: "457", loginStatus: "Access Denied")
 
 if user1.verifyLogin(customers: customers,user: user1)
 {
@@ -129,6 +129,7 @@ else
 //4.-Update customer info
 user1.address = "34 Scarlet St, ON CA"
 user1.custName = "Priyra M."
+user1.email = "Mandeep@gmail.com"
 
 if !user1.updateProfile(customers: customers)
 {

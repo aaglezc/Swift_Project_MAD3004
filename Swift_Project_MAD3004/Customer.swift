@@ -22,7 +22,7 @@ class Customer: User
     
     var custName: String{
         get{
-            return _custName!
+            return _custName ?? "NO Customer Info"
         }
         set{
             _custName = newValue
@@ -30,7 +30,7 @@ class Customer: User
     }
     var address: String{
         get{
-            return _address!
+            return _address ?? "NO Address Info"
         }
         set{
             _address = newValue
@@ -38,7 +38,7 @@ class Customer: User
     }
     var email: String{
         get{
-            return _email!
+            return _email ?? "NO email Info"
         }
         set{
             _email = newValue
@@ -48,7 +48,7 @@ class Customer: User
     {
         get
         {
-            return _shippingInfo!
+            return _shippingInfo ?? "NO Shipping Info"
         }
         set
         {
@@ -59,7 +59,7 @@ class Customer: User
     {
         get
         {
-            return _creditCardInfo!
+            return _creditCardInfo ?? "NO Credit Card Info"
         }
         set
         {
