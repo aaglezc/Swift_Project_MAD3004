@@ -73,6 +73,8 @@ class User
         {
             if i._userId == user._userId
             {
+                if i._password == user._password
+                {
                 user.custName       = i.custName
                 user.address        = i.address
                 user.email          = i.email
@@ -81,10 +83,10 @@ class User
                 user._loginStatus    = "Active"
                 return true
             }
+            }
         }
-        user._loginStatus    = "Access Denied"
-        return false
-    }
     
-
+         user._loginStatus    = "Access Denied"
+         return false
+}
 }
