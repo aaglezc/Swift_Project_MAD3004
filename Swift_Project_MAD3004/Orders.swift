@@ -144,8 +144,8 @@ class Order
     {
         print("************Order Details*************")
         print("Order ID: \(self._orderId!)")
-        print("Order Date: \(self._dateCreated)")
-        print("Shipping Date: \(self._dateShipped)")
+        print("Order Date: \(self._dateCreated.DateFormat())")
+        print("Shipping Date: \(self._dateShipped.DateFormat())")
         print("Customer Name: \(self._customerName)")
         print("Customer ID: \(self._customerId)")
         print("Order Status: \(self._status)")
