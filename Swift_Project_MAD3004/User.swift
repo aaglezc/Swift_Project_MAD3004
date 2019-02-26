@@ -82,12 +82,23 @@ class User
                 user.creditCardInfo = i.creditCardInfo
                 user._loginStatus    = "Active"
                 return true
+                }
+                
             }
+            else{
+                
+                user._loginStatus    = "Access Denied"
+                return false
             }
+            
         }
     
+
+        
+
          user._loginStatus    = "Access Denied"
          user.email = ""
+
          return false
 }
 }
