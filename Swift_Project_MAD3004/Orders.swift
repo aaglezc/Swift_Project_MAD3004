@@ -123,7 +123,21 @@ class Order
     
     func placeOrder()
     {
+        self._shippingInfo.shippingCost = 50
+        self._shippingInfo.shippingRegionId = 4
+        self._shippingInfo.shippingType = "Express"
+        self._shippingInfo.shippingId = 1
         
+    }
+    
+    func CalcGrandTotal() -> Float
+    {
+        var total: Float = 0.0
+        for od in self._orderDetails
+        {
+            total = total + Float(od.subTotal)
+        }
+        return Float(total)
     }
     
     func display()

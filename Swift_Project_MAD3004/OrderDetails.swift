@@ -65,7 +65,11 @@ var unitCost: Float{
         _unitCost = newValue
     }
 }
-
+    var subTotal: Float{
+        get{
+            return _subTotal
+        }
+    }
 
 
 init()
@@ -86,11 +90,6 @@ init (orderId: Int, productId: Int, productName: String, quantity: Int, unitCost
     self._quantity = quantity
     self._unitCost = unitCost
  
-    
-}
-
-func calcPrice()
-{
     
 }
 
