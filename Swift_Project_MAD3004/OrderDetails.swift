@@ -16,6 +16,9 @@ class OrderDetails
     private var _quantity: Int
     private var _unitCost: Float
     private var _subTotal: Float
+    {
+        return _unitCost * Float(self._quantity)
+    }
 
 
 var orderId: Int{
@@ -64,14 +67,6 @@ var unitCost: Float{
 }
 
 
-var subTotal: Float{
-    get{
-        return _subTotal
-    }
-    set{
-        _subTotal = newValue
-    }
-}
 
 init()
 {
@@ -79,18 +74,18 @@ init()
     self._productId = 0
     self._productName = String()
     self._quantity = 0
-     self._unitCost = 0.0
-     self._subTotal = 0.0
+    self._unitCost = 0.0
+
 }
 
-init (orderId: Int, productId: Int, productName: String, quantity: Int, unitCost: Float, subTotal: Float)
+init (orderId: Int, productId: Int, productName: String, quantity: Int, unitCost: Float)
 {
     self._orderId = orderId
     self._productId = productId
     self._productName = productName
     self._quantity = quantity
-     self._unitCost = unitCost
-     self._subTotal = subTotal
+    self._unitCost = unitCost
+ 
     
 }
 
