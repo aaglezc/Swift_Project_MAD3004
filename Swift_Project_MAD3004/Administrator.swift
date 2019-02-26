@@ -37,6 +37,7 @@ class Administrator: User
         self._adminName = String()
         self._email = String()
         super.init()
+
     }
     
     init(adminName: String, email: String, userId: String, password: String)
