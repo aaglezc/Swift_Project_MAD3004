@@ -10,5 +10,5 @@ import Foundation
 
 protocol IDisplay
 {
-    func display() -> String
+    func display()
 }

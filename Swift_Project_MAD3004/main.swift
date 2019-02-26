@@ -114,7 +114,7 @@ for i in customers
 }
 
 //3.- Accesing with user info
-var user1 = Customer(userId:"pryra1", password: "21yxr4y98", loginStatus: "Accessing")
+var user1 = Customer(userId:"pryra1", password: "123", loginStatus: "Accessing")
 
 if user1.verifyLogin(customers: customers,user: user1)
 {
@@ -175,9 +175,18 @@ for c in user1.shoppingCart
 
 
 //9.- customer call for Checkout
+print("--------------------testing Checkout")
+user1.checkOut()
 
-
-
+for o in user1.orders
+{
+    for od in o.orderDetalis
+    {
+        od.display()
+    }
+//10.- customer place the order for shipping
+    o.placeOrder()
+}
 
 
 
@@ -185,7 +194,7 @@ print("End of program")
 
 
 ///testing
-
+/*
 var shipping = ShippingInfo(shippingId: 801, shippingType: "Technology", shippingCost: 1999.20, shippingRegionId: 1)
 
 
@@ -193,5 +202,6 @@ shipping.display()
 print("**********************")
 
  
-var orderdetails = OrderDetails(orderId: 11, productId: 112233, productName: "Iphone 7 Plus", quantity: 2, unitCost: 1500.90, subTotal: 3200.67)
+var orderdetails = OrderDetails(orderId: 11, productId: 112233, productName: "Iphone 7 Plus", quantity: 2, unitCost: 1500.90) //, subTotal: 3200.67)
 orderdetails.display()
+*/
