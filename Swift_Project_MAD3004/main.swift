@@ -124,12 +124,14 @@ if user1.verifyLogin(customers: customers,user: user1)
 else
 {
     print(user1.loginStatus)
+    
 }
 
 //4.-Update customer info
 user1.address = "34 Scarlet St, ON CA"
 user1.custName = "Priyra M."
 user1.email = "Mandeep@gmail.com"
+user1.creditCardInfo = "1332 2992 2091 9018"
 
 if !user1.updateProfile(customers: customers)
 {
