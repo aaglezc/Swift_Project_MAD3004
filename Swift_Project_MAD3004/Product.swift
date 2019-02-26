@@ -13,7 +13,7 @@ class Product
 {
     private var _productId: Int
     private var _productName:String
-    private var _price: Double
+    private var _price: Float
     
     var ProductId: Int
     {
@@ -36,7 +36,7 @@ class Product
             _productName = newValue
         }
     }
-    var Price: Double
+    var Price: Float
     {
         get
         {
@@ -53,11 +53,11 @@ class Product
     {
         self._productId = 0
         self._productName = String()
-        self._price = Double()
+        self._price = Float()
     }
     
     
-    init(productId: Int, productName: String, Price: Double)
+    init(productId: Int, productName: String, Price: Float)
     {
         self._productId = productId
         self._productName = productName
@@ -67,7 +67,7 @@ class Product
     
     func display()
     {
-        print("Product Id: ",self._productId,"\nProduct Name: ",self._productName,"\nProduct Price: ",self._price )
+        print("Product Id: ",self._productId,"\nProduct Name: ",self._productName,"\nProduct Price: ",self._price.currencyformat())
         print("*****************************")
     }
 }
