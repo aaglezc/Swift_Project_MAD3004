@@ -156,9 +156,15 @@ class Customer: User
     
     func checkOut()
     {
-     /*   var order = Order(orId: orders.count+1, dtCreate: Date(), dtShip: Date(), cxName: self._custName, cxId: self.userId, Status: "Order Created")
-       _orders.append(contentsOf: <#T##Sequence#>)
-       */
+        let order = Order(orId: orders.count+1, dtCreate: Date(), dtShip: Date(), cxName: self._custName ?? "", cxId: self.userId, Status: "Order Created")
+        self._orders.append(order)
+        for s in self._shoppingCart
+        {
+            let od = OrderDetails(orderId: s.productId.ProductId, productId: s.productId.ProductId, productName: s.productId.ProductName, quantity: s.quantity, unitCost: Float(s.productId.Price))
+            order.orderDetalis.append(od)
+        }
+    
+       
         
     }
     

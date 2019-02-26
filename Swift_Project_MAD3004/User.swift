@@ -93,7 +93,12 @@ class User
             
         }
     
+
         
+
+         user._loginStatus    = "Access Denied"
+         user.email = ""
+
          return false
 }
 }
