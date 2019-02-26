@@ -186,6 +186,8 @@ var shipping = ShippingInfo(shippingId: 801, shippingType: "Technology", shippin
 
 
 shipping.display()
-
+print("**********************")
 
  
+var orderdetails = OrderDetails(orderId: 11, productId: 112233, productName: "Iphone 7 Plus", quantity: 2, unitCost: 1500.90, subTotal: 3200.67)
+orderdetails.display()
