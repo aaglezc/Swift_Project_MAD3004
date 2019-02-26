@@ -87,6 +87,9 @@ products.append(pr5)
 
 //1.8 Updating 1 product form Catalog
 let prUdpdated = Product(productId: 05, productName: "Iphone 7 Plus", Price: 750)
+
+//let prUdpdated = Product(productId: 06, productName: "Samsung", Price: 750)
+print("+++++++++++++++")
 if adm1.updateCatalog(products: products, updProduct: prUdpdated)
 {
 print("Product Updated Succesfully")
