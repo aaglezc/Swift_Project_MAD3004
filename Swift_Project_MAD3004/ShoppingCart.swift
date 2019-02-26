@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ShoppingCart
+class ShoppingCart :IDisplay
 {
     private var _cartId: Int?
     private var _productId: Product?

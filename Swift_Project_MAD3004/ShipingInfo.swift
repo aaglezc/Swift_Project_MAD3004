@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ShippingInfo
+class ShippingInfo : IDisplay
 {
     private var _shippingId: Int
     private var _shippingType: String

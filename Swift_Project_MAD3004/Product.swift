@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Product
+class Product : IDisplay
 {
     private var _productId: Int
     private var _productName:String

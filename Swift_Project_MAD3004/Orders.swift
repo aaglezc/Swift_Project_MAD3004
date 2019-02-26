@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Order
+class Order : IDisplay
 {
     private var _orderId: Int?
     private var _dateCreated: Date

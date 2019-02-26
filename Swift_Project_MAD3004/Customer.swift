@@ -168,7 +168,7 @@ class Customer: User
         
     }
     
-    func display()
+    override func display()
     {
         print("************Customer Details*************")
         print("Customer Name: \(self._custName!)")
