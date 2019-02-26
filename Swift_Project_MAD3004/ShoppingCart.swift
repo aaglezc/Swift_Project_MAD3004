@@ -77,10 +77,10 @@ class ShoppingCart
     
     func updateQuantity(customer : Customer, newQty : Int) -> Bool
     {
-        print("Customer Items------>:")
+        //print("Customer Items------>:")
         for c in customer.shoppingCart
         {
-            print("Item:",c._productId!.ProductId)
+            //print("Item:",c._productId!.ProductId)
             if c._cartId == self._cartId
             {
                 c._quantity = newQty
@@ -95,12 +95,6 @@ class ShoppingCart
         
     }
     
-    func checkOut()
-    {
-        
-        
-        
-    }
     
     func display()
     {

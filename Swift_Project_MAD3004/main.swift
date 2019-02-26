@@ -94,7 +94,7 @@ if adm1.updateCatalog(products: products, updProduct: prUdpdated)
 {
 print("Product Updated Succesfully")
 }
-print("-----------------------------------------")
+print("\n-----------------------------------------")
 //2.- Creating customer users
 var customers = [Customer]()
 
@@ -118,7 +118,7 @@ for i in customers
 
 //3.- Accesing with user info
 
-var user1 = Customer(userId:"pryra1", password: "457", loginStatus: "Access Denied")
+//var user1 = Customer(userId:"pryra1", password: "457", loginStatus: "Access Denied")
 
 var user1 = Customer(userId:"pryra1", password: "123", loginStatus: "Accessing")
 
@@ -161,9 +161,9 @@ cartItem4.addCartItem(customer: user1)
 var cartItem5 = ShoppingCart(cartId: 5, productId: pr5, quantity: 5, dateAdded: Date())
 cartItem5.addCartItem(customer: user1)
 
-//user1.display()
+//Showing Products
 
-print("\n displaying Items:")
+print("\n Displaying Items of Shopping Cart:")
 for c in user1.shoppingCart
 {
     c.display()
@@ -175,33 +175,35 @@ if !cartItem5.updateQuantity(customer: user1, newQty: 2)
 {
     print("Update Failed")
 }
-print("Display List Updated")
+print("\n Display List Updated (Product 5 Updated)")
 for c in user1.shoppingCart
 {
     c.display()
 }
 
 
-
-
 //9.- customer call for Checkout
-print("--------------------Testing Checkout")
+print("\n--------------------Testing Checkout")
 user1.checkOut()
 
 for o in user1.orders
 {
+    var gt: Float = 0.0
     for od in o.orderDetalis
     {
         od.display()
     }
 //10.- customer place the order for shipping
     o.placeOrder()
+    gt = o.CalcGrandTotal()
+    print("\n**************************************************")
+    print("Order Grand Total : \(gt.currencyformat())")
+    print("**************************************************")
+    o.shippingInfo.display()
 }
 
 
-
-
-print("End of program")
+print("\nEnd of program")
 
 
 ///testing
