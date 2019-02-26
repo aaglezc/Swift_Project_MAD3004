@@ -154,6 +154,13 @@ class Customer: User
         return false
     }
     
+    func checkOut()
+    {
+     /*   var order = Order(orId: orders.count+1, dtCreate: Date(), dtShip: Date(), cxName: self._custName, cxId: self.userId, Status: "Order Created")
+       _orders.append(contentsOf: <#T##Sequence#>)
+       */
+        
+    }
     
     func display()
     {

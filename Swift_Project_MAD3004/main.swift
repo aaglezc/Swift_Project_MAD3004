@@ -174,6 +174,10 @@ for c in user1.shoppingCart
 
 
 
+//9.- customer call for Checkout
+
+
+
 
 
 
