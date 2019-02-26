@@ -28,3 +28,11 @@ extension Float
     }
     
 }
+
+extension Int
+{
+    public func unit() -> String
+    {
+        return String.init(format: "%d Units", self)
+    }
+}

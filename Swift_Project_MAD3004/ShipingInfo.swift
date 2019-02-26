@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ShippingInfo
+class ShippingInfo : IDisplay
 {
     private var _shippingId: Int
     private var _shippingType: String
@@ -78,7 +78,7 @@ func display()
     print("************Shipping Information Details*************")
     print("Shipping ID: \(self._shippingId )")
     print("Shipping Type: \(self._shippingType)")
-    print("Shipping Cost: \(self._shippingCost)")
+    print("Shipping Cost: \(self._shippingCost.currencyformat())")
     print("Shipping Region Id: \(self.shippingRegionId)")
     
 }

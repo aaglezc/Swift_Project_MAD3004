@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Administrator: User
+class Administrator: User 
 {
    private var _adminName: String?
     private var _email: String?
@@ -61,6 +61,14 @@ class Administrator: User
        }
         print("Product is not found!")
                 return false
-}
+    }
+    
+    override func display()
+    {
+        print("************Administrator Details*************")
+        print("Admin Name: \(self._adminName!)")
+        print("Address: \(self._email!)")
+        
+    }
 }
 

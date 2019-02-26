@@ -13,7 +13,6 @@
 		9B4153712220CF6B0037DC78 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4153702220CF6B0037DC78 /* DateFormatting.swift */; };
 		9B475EAF2224A5D1004FF869 /* ShipingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B475EAE2224A5D1004FF869 /* ShipingInfo.swift */; };
 		9B475EB12224A5E6004FF869 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B475EB02224A5E6004FF869 /* OrderDetails.swift */; };
-		9B54BFA82224CCEC00EE9E1F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54BFA72224CCEC00EE9E1F /* Validation.swift */; };
 		9B5B21AC221F86B80072670D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AB221F86B80072670D /* User.swift */; };
 		9B5B21AE221F89840072670D /* Administrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AD221F89840072670D /* Administrator.swift */; };
 		9B5B21B0221F8DBB0072670D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B21AF221F8DBB0072670D /* Protocols.swift */; };
@@ -40,7 +39,6 @@
 		9B4153702220CF6B0037DC78 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatting.swift; path = Swift_Project_MAD3004/DateFormatting.swift; sourceTree = SOURCE_ROOT; };
 		9B475EAE2224A5D1004FF869 /* ShipingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShipingInfo.swift; path = Swift_Project_MAD3004/ShipingInfo.swift; sourceTree = SOURCE_ROOT; };
 		9B475EB02224A5E6004FF869 /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderDetails.swift; path = Swift_Project_MAD3004/OrderDetails.swift; sourceTree = SOURCE_ROOT; };
-		9B54BFA72224CCEC00EE9E1F /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "\U0010Validation.swift"; path = "Swift_Project_MAD3004/\U0010Validation.swift"; sourceTree = SOURCE_ROOT; };
 		9B5B21AB221F86B80072670D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Swift_Project_MAD3004/User.swift; sourceTree = SOURCE_ROOT; };
 		9B5B21AD221F89840072670D /* Administrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Administrator.swift; path = Swift_Project_MAD3004/Administrator.swift; sourceTree = SOURCE_ROOT; };
 		9B5B21AF221F8DBB0072670D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Swift_Project_MAD3004/Protocols.swift; sourceTree = SOURCE_ROOT; };
@@ -106,7 +104,6 @@
 			children = (
 				9B4153702220CF6B0037DC78 /* DateFormatting.swift */,
 				9B5B21AF221F8DBB0072670D /* Protocols.swift */,
-				9B54BFA72224CCEC00EE9E1F /* Validation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -171,7 +168,6 @@
 				9B41536F2220C63C0037DC78 /* Orders.swift in Sources */,
 				9B41536D2220C07E0037DC78 /* ShoppingCart.swift in Sources */,
 				9B4153712220CF6B0037DC78 /* DateFormatting.swift in Sources */,
-				9B54BFA82224CCEC00EE9E1F /* Validation.swift in Sources */,
 				9B5B21AE221F89840072670D /* Administrator.swift in Sources */,
 				9B5B21AC221F86B80072670D /* User.swift in Sources */,
 				9B475EB12224A5E6004FF869 /* OrderDetails.swift in Sources */,

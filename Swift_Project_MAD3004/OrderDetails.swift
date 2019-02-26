@@ -8,7 +8,7 @@
 
 import Foundation
 
-class OrderDetails
+class OrderDetails : IDisplay
 {
     private var _orderId: Int
     private var _productId: Int
